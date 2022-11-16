@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.UserLoginHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.UserLoginHistory">
+            <id property="ID" column="ID" jdbcType="INTEGER"/>
+            <result property="AREA" column="AREA" jdbcType="VARCHAR"/>
+            <result property="COUNTRY" column="COUNTRY" jdbcType="VARCHAR"/>
+            <result property="USER_ID" column="USER_ID" jdbcType="VARCHAR"/>
+            <result property="IP" column="IP" jdbcType="VARCHAR"/>
+            <result property="LOGIN_TIME" column="LOGIN_TIME" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,AREA,COUNTRY,
+        USER_ID,IP,LOGIN_TIME
+    </sql>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.UserAddrMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.UserAddr">
+            <id property="addr_id" column="addr_id" jdbcType="INTEGER"/>
+            <result property="user_id" column="user_id" jdbcType="INTEGER"/>
+            <result property="receiver_name" column="receiver_name" jdbcType="VARCHAR"/>
+            <result property="receiver_mobile" column="receiver_mobile" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="area" column="area" jdbcType="VARCHAR"/>
+            <result property="addr" column="addr" jdbcType="VARCHAR"/>
+            <result property="post_code" column="post_code" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="common_addr" column="common_addr" jdbcType="INTEGER"/>
+            <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="update_time" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        addr_id,user_id,receiver_name,
+        receiver_mobile,province,city,
+        area,addr,post_code,
+        status,common_addr,create_time,
+        update_time
+    </sql>
+</mapper>

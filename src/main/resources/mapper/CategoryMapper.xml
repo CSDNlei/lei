@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.CategoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.Category">
+            <id property="category_id" column="category_id" jdbcType="INTEGER"/>
+            <result property="category_name" column="category_name" jdbcType="VARCHAR"/>
+            <result property="category_level" column="category_level" jdbcType="INTEGER"/>
+            <result property="parent_id" column="parent_id" jdbcType="INTEGER"/>
+            <result property="category_icon" column="category_icon" jdbcType="VARCHAR"/>
+            <result property="category_slogan" column="category_slogan" jdbcType="VARCHAR"/>
+            <result property="category_pic" column="category_pic" jdbcType="VARCHAR"/>
+            <result property="category_bg_color" column="category_bg_color" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        category_id,category_name,category_level,
+        parent_id,category_icon,category_slogan,
+        category_pic,category_bg_color
+    </sql>
+    <insert id="insertAll">
+        insert into category
+        (category_id, category_name, category_level,
+         parent_id, category_icon, category_slogan,
+         category_pic, category_bg_color)
+        values (#{category_id,jdbcType=NUMERIC}, #{category_name,jdbcType=VARCHAR}, #{category_level,jdbcType=NUMERIC},
+                #{parent_id,jdbcType=NUMERIC}, #{category_icon,jdbcType=VARCHAR}, #{category_slogan,jdbcType=VARCHAR},
+                #{category_pic,jdbcType=VARCHAR}, #{category_bg_color,jdbcType=VARCHAR})
+
+    </insert>
+</mapper>

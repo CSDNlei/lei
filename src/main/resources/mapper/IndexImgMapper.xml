@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.IndexImgMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.IndexImg">
+            <id property="img_id" column="img_id" jdbcType="VARCHAR"/>
+            <result property="img_url" column="img_url" jdbcType="VARCHAR"/>
+            <result property="img_bg_color" column="img_bg_color" jdbcType="VARCHAR"/>
+            <result property="prod_id" column="prod_id" jdbcType="VARCHAR"/>
+            <result property="category_id" column="category_id" jdbcType="VARCHAR"/>
+            <result property="index_type" column="index_type" jdbcType="INTEGER"/>
+            <result property="seq" column="seq" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="update_time" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        img_id,img_url,img_bg_color,
+        prod_id,category_id,index_type,
+        seq,status,create_time,
+        update_time
+    </sql>
+</mapper>

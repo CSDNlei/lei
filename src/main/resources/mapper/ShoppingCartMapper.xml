@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.ShoppingCartMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.ShoppingCart">
+            <id property="cart_id" column="cart_id" jdbcType="INTEGER"/>
+            <result property="product_id" column="product_id" jdbcType="VARCHAR"/>
+            <result property="sku_id" column="sku_id" jdbcType="VARCHAR"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="cart_num" column="cart_num" jdbcType="VARCHAR"/>
+            <result property="cart_time" column="cart_time" jdbcType="VARCHAR"/>
+            <result property="product_price" column="product_price" jdbcType="DECIMAL"/>
+            <result property="sku_props" column="sku_props" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cart_id,product_id,sku_id,
+        user_id,cart_num,cart_time,
+        product_price,sku_props
+    </sql>
+</mapper>

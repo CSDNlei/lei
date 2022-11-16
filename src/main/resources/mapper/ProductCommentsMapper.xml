@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilei.lei.mapper.ProductCommentsMapper">
+
+    <resultMap id="BaseResultMap" type="com.yilei.lei.entity.ProductComments">
+            <id property="comm_id" column="comm_id" jdbcType="VARCHAR"/>
+            <result property="product_id" column="product_id" jdbcType="VARCHAR"/>
+            <result property="product_name" column="product_name" jdbcType="VARCHAR"/>
+            <result property="order_item_id" column="order_item_id" jdbcType="VARCHAR"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="is_anonymous" column="is_anonymous" jdbcType="INTEGER"/>
+            <result property="comm_type" column="comm_type" jdbcType="INTEGER"/>
+            <result property="comm_level" column="comm_level" jdbcType="INTEGER"/>
+            <result property="comm_content" column="comm_content" jdbcType="VARCHAR"/>
+            <result property="comm_imgs" column="comm_imgs" jdbcType="VARCHAR"/>
+            <result property="sepc_name" column="sepc_name" jdbcType="TIMESTAMP"/>
+            <result property="reply_status" column="reply_status" jdbcType="INTEGER"/>
+            <result property="reply_content" column="reply_content" jdbcType="VARCHAR"/>
+            <result property="reply_time" column="reply_time" jdbcType="TIMESTAMP"/>
+            <result property="is_show" column="is_show" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        comm_id,product_id,product_name,
+        order_item_id,user_id,is_anonymous,
+        comm_type,comm_level,comm_content,
+        comm_imgs,sepc_name,reply_status,
+        reply_content,reply_time,is_show
+    </sql>
+</mapper>
